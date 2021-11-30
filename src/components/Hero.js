@@ -2,9 +2,24 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
+
 const Hero = () => {
   return (
-    <h2>hero component</h2>
+    <Wrapper>
+      <StaticImage
+        src="../images/mainBcg.png"
+        layout="fullWidth"
+        className="img"
+        alt="color palette"
+      />
+      <div className="info">
+        <article>
+          <h3>if you can dream it, we can create it</h3>
+          <h1>let your home be unique and stylish</h1>
+          <Link to="/projects">projects</Link>
+        </article>
+      </div>
+    </Wrapper>
   )
 }
 

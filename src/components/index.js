@@ -1,3 +1,4 @@
+// import & export all project components in order to reduce import path.
 import Layout from "./Layout"
 import Hero from "./Hero"
 import About from "./About"
