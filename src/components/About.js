@@ -2,9 +2,24 @@ import React from 'react'
 import styled from 'styled-components'
 import Title from './Title'
 import services from '../constants/services'
+
 const About = () => {
+  // iterate over the services
   return (
-    <h2>about component</h2>
+    <Wrapper className='section'>
+      <Title title='about us' />
+      <div className="section-center">
+        {services.map(({ id, icon, label, text }) => {
+          return (
+            <article key={id}>
+              <span>{icon}</span>
+              <h4>{label}</h4>
+              <p>{text}</p>
+            </article>
+          )
+        })}
+      </div>
+    </Wrapper>
   )
 }
 const Wrapper = styled.section`

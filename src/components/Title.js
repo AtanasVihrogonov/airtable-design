@@ -1,9 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Title = () => {
+const Title = ({ title }) => {
   return (
-   <h2>title component</h2>
+    <Wrapper>
+      <h2>
+        <span>/</span> {title}
+      </h2>
+    </Wrapper>
   )
 }
 const Wrapper = styled.div`

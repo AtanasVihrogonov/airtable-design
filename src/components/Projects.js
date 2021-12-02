@@ -5,11 +5,48 @@ import styled from 'styled-components'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import SearchButtons from './SearchButtons'
 
-const Projects = () => {
-  
+// give un elias of projects called data
+const Projects = ({ projects: data, title, page }) => {
+  const [projects, setProjects] = React.useState(data)
+  // console.log(data);
+
+  // more logic here
 
   return (
-    <h2>projects</h2>
+    <Wrapper className="section">
+      {/* set up default value just in case I ever forgot the pass it in. */}
+      <Title title={title || 'projects'} />
+      {/* search buttons here */}
+      <div className="section-center">
+        {/* iterate over the state value and reference each item as item */}
+        {projects.map(item => {
+          const { id } = item
+          const { name, type, image } = item.data
+
+          return (
+            <article key={id}>
+              <div className="container">
+                <GatsbyImage
+                  image={getImage(image.localFiles[0])}
+                  alt={name}
+                  className="img"
+                ></GatsbyImage>
+                <div className="info">
+                  <p>- {type} -</p>
+                  <h3>{name}</h3>
+                </div>
+              </div>
+            </article>
+          )
+        })}
+      </div>
+      {/* if the page props doesn't exist */}
+      {!page && (
+        <Link to="/projects" className="btn">
+          all projects
+        </Link>
+      )}
+    </Wrapper>
   )
 }
 
@@ -84,7 +121,7 @@ const Wrapper = styled.section`
   }
   a {
     display: block;
-    width: 9rem;
+    width: 10rem;
     text-align: center;
     margin: 0 auto;
     margin-top: 3rem;
