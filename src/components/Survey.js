@@ -4,10 +4,91 @@ import styled from 'styled-components'
 import base from './Airtable'
 import { FaVoteYea } from 'react-icons/fa'
 
+// console.log(base);
+
 const Survey = () => {
- 
+  const [items, setItems] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  // get the items
+  const getRecords = async () => {
+    // call our base
+    const records = await base('Survey')
+      .select({})
+      .firstPage()
+      .catch(err => console.log(err))
+    // console.log(records);
+
+    const newItems = records.map(record => {
+      const { id, fields } = record
+      return { id, fields }
+    })
+    setItems(newItems)
+    setLoading(false)
+  }
+
+  const giveVote = async id => {
+    setLoading(true)
+    // iterate over the state items and update the one that has the matching id.
+    const tempItems = [...items].map(item => {
+      if (item.id === id) {
+        let { id, fields } = item
+        fields = { ...fields, votes: fields.votes + 1 }
+        return { id, fields }
+      } else {
+        return item
+      }
+    })
+
+    const records = await base('Survey')
+      .update(tempItems)
+      .catch(err => console.log(err))
+    const newItems = records.map(record => {
+      const { id, fields } = record
+      return { id, fields }
+    })
+    setItems(newItems)
+    setLoading(false)
+  }
+
+  useEffect(() => {
+    getRecords()
+    // set dependency array to be empty array, so that means to be run once, once we render the component.
+  }, [])
+
+  // console.log(items);
+
   return (
-   <h2>survey component</h2>
+    <Wrapper className="section">
+      <div className="container">
+        <Title title="survey"></Title>
+        <h3>most important room in the house?</h3>
+
+        <ul>
+          {items.map(item => {
+            const {
+              id,
+              fields: { name, votes },
+            } = item
+            return (
+              <li key={id}>
+                <div className="key">{name.toUpperCase().substring(0, 2)}</div>
+                <div>
+                  <h4>{name}</h4>
+                  <p>{votes} votes</p>
+                </div>
+                <button
+                  disabled={loading ? true : false}
+                  onClick={() => giveVote(id)}
+                >
+                  <FaVoteYea />
+                </button>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    </Wrapper>
   )
 }
 
