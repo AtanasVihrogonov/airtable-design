@@ -16,6 +16,7 @@ const HomePage = ({ data }) => {
   // console.log(data)
   const {
     allAirtable: { nodes: projects },
+    customers: { nodes },
   } = data
   // give un elias of nodes called projects
 
@@ -23,7 +24,8 @@ const HomePage = ({ data }) => {
     <Layout>
       <Hero />
       <About />
-      <Projects projects={projects} title='latest projects' />
+      <Projects projects={projects} title="latest projects" />
+      <Slider customers={nodes} />
     </Layout>
   )
 }
@@ -49,6 +51,29 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+
+    customers: allAirtable(filter: { table: { eq: "Customers" } }) {
+      nodes {
+        data {
+          name
+          quote
+          title
+          image {
+            localFiles {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: FIXED
+                  width: 150
+                  height: 150
+                  placeholder: TRACED_SVG
+                )
+              }
+            }
+          }
+        }
+        id
       }
     }
   }
