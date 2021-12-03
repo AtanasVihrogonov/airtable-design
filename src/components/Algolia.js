@@ -14,7 +14,7 @@ import {
 
 const Search = () => {
   return (
-    <h2>algolia search</h2>
+    <h2>algolia flexible search</h2>
   )
 }
 
