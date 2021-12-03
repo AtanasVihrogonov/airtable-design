@@ -36,12 +36,12 @@ export const query = graphql`
     allAirtable(
       filter: { table: { eq: "Projects" } }
       limit: 3
-      sort: { fields: data___data, order: DESC }
+      sort: { fields: data___date, order: DESC }
     ) {
       nodes {
         id
         data {
-          data
+          date
           name
           type
           image {

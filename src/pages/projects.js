@@ -12,6 +12,7 @@ const ProjectsPage = ({ data }) => {
     <Wrapper>
       <Layout>
         <Projects title="our projects" projects={projects} page />
+        <Algolia />
       </Layout>
     </Wrapper>
   )
@@ -21,12 +22,12 @@ export const query = graphql`
   {
     allAirtable(
       filter: { table: { eq: "Projects" } }
-      sort: { fields: data___data, order: DESC }
+      sort: { fields: data___date, order: DESC }
     ) {
       nodes {
         id
         data {
-          data
+          date
           name
           type
           image {
