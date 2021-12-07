@@ -7,6 +7,9 @@ import NavLink from './NavLink'
 import { GatsbyContext } from '../context/context'
 
 const Navbar = () => {
+  // grab the values from the state
+  const { isSidebarOpen, showSidebar } = useContext(GatsbyContext)
+
   return (
     <Wrapper>
       <div className="nav-center">
@@ -14,9 +17,11 @@ const Navbar = () => {
           <Link to="/">
             <img src={logo} ali="design"></img>
           </Link>
-          <button className="toggle-btn">
-            <GoThreeBars />
-          </button>
+          {!isSidebarOpen && (
+            <button className="toggle-btn" onClick={showSidebar}>
+              <GoThreeBars />
+            </button>
+          )}
         </div>
         <ul className="nav-links">
           <li>
@@ -26,7 +31,7 @@ const Navbar = () => {
             <button>developers</button>
           </li>
           <li>
-            <button>company</button>
+            <Link to="/products/payments">company</Link>
           </li>
         </ul>
       </div>

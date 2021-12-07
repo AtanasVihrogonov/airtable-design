@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { GatsbyContext } from '../context/context'
+
 const NavLink = () => {
   return (
     <h2>nav link</h2>

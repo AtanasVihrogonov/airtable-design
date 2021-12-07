@@ -12,11 +12,15 @@ import Sidebar from './Sidebar'
 import { GatsbyContext } from '../context/context'
 
 const Layout = ({ children }) => {
-  
+  // getting the object from context
+  const { isSidebarOpen } = useContext(GatsbyContext)
+  // console.log(data)
 
   return (
     <>
       <Navbar />
+      {/* show me the sidebar only if isSidebarOpen is true */}
+      {isSidebarOpen && <Sidebar />}
       {children}
       <Footer />
     </>

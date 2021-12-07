@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <Wrapper>
       <StaticImage
-        src="../images/mainBcg.png"
+        src="../images/mainBci.jpg"
         layout="fullWidth"
         className="img"
         alt="color palette"
@@ -38,7 +38,7 @@ const Wrapper = styled.section`
     height: 100%;
     display: grid;
     place-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
   }
   article {
     width: 85vw;
