@@ -8,7 +8,17 @@ import { GatsbyContext } from '../context/context'
 
 const Navbar = () => {
   // grab the values from the state
-  const { isSidebarOpen, showSidebar } = useContext(GatsbyContext)
+  const { isSidebarOpen, showSidebar, links } = useContext(GatsbyContext)
+
+  // render the array with only the unique values
+  const tempLinks = [
+    ...new Set(
+      links.map(link => {
+        return link.page
+      })
+    ),
+  ]
+  console.log(tempLinks)
 
   return (
     <Wrapper>
@@ -24,7 +34,7 @@ const Navbar = () => {
           )}
         </div>
         <ul className="nav-links">
-          <li>
+          {/* <li>
             <button>products</button>
           </li>
           <li>
@@ -32,7 +42,10 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/products/payments">company</Link>
-          </li>
+          </li> */}
+          {tempLinks.map((page, index) => {
+            return <NavLink key={index} page={page}></NavLink>
+          })}
         </ul>
       </div>
     </Wrapper>

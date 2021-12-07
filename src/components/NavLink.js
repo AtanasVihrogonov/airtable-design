@@ -3,9 +3,28 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { GatsbyContext } from '../context/context'
 
-const NavLink = () => {
+const NavLink = ({ page }) => {
+  const { links } = useContext(GatsbyContext)
   return (
-    <h2>nav link</h2>
+    <Wrapper>
+      <button>{page}</button>
+      <div className="links">
+        {/* display only the sublinks that match the mama page */}
+        {links.map((link, index) => {
+          const { url, label, icon } = link
+          // if the link page is = page, then return those particular page
+          if (link.page === page) {
+            return (
+              <Link to={url} key={index}>
+                {icon}
+                {label}
+              </Link>
+            )
+          }
+        })}
+        <div className="caret"></div>
+      </div>
+    </Wrapper>
   )
 }
 
