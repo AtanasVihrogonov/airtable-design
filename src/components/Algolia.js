@@ -69,7 +69,7 @@ const Wrapper = styled.section`
         outline-color: var(--clr-grey-9);
       }
       button {
-        background: var(--clr-primary-1);
+        background: var(--clr-primary-3);
         svg {
           fill: var(--clr-white);
         }

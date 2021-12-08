@@ -31,7 +31,7 @@ const Wrapper = styled.section`
     grid-gap: 2rem;
     .icon {
       font-size: 4rem;
-      color: var(--clr-primary-1);
+      color: var(--clr-primary-3);
       margin-bottom: 1rem;
     }
     h4 {

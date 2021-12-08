@@ -32,7 +32,7 @@ const Wrapper = styled.footer`
     }
   }
   a {
-    color: var(--clr-primary-1);
+    color: var(--clr-primary-3);
   }
 `
 export default Footer

@@ -20,7 +20,7 @@ const Wrapper = styled.div`
     font-weight: 500;
     span {
       font-size: 0.85em;
-      color: var(--clr-primary-1);
+      color: var(--clr-primary-3);
       margin-right: 1rem;
       font-weight: 700;
     }

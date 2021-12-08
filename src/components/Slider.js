@@ -107,7 +107,7 @@ const Wrapper = styled.div`
     }
     h4 {
       text-transform: uppercase;
-      color: var(--clr-primary-1);
+      color: var(--clr-primary-3);
       margin-bottom: 0.25rem;
     }
     .title {
@@ -123,7 +123,7 @@ const Wrapper = styled.div`
     .icon {
       font-size: 3rem;
       margin-top: 1.5rem;
-      color: var(--clr-primary-1);
+      color: var(--clr-primary-3);
     }
     .prev,
     .next {
@@ -144,7 +144,7 @@ const Wrapper = styled.div`
     }
     .prev:hover,
     .next:hover {
-      background: var(--clr-primary-1);
+      background: var(--clr-primary-3);
     }
     .prev {
       left: 0;

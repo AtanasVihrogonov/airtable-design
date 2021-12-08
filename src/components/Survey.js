@@ -131,7 +131,7 @@ const Wrapper = styled.section`
       .key {
         color: var(--clr-white);
         font-size: 1.5rem;
-        background: var(--clr-primary-1);
+        background: var(--clr-primary-3);
         padding: 0.5rem 1rem;
         border-radius: var(--radius);
       }
