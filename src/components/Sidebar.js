@@ -79,11 +79,11 @@ const Wrapper = styled.aside`
         font-weight: 700;
         font-size: 1.2rem;
         .icon {
-          color: #88add2;
+          color: #bcbff7;
           font-size: 2rem;
         }
         &:hover {
-          color: #88add2;
+          color: #bcbff7;
           .icon {
             color: #0a2540;
           }

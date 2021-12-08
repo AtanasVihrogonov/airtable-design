@@ -107,7 +107,7 @@ const Wrapper = styled.div`
     }
     h4 {
       text-transform: uppercase;
-      color: var(--clr-primary-5);
+      color: var(--clr-primary-1);
       margin-bottom: 0.25rem;
     }
     .title {
@@ -123,14 +123,14 @@ const Wrapper = styled.div`
     .icon {
       font-size: 3rem;
       margin-top: 1.5rem;
-      color: var(--clr-primary-5);
+      color: var(--clr-primary-1);
     }
     .prev,
     .next {
       position: absolute;
       top: 200px;
       transform: translateY(-50%);
-      background: var(--clr-grey-5);
+      background: var(--clr-primary-4);
       color: var(--clr-white);
       width: 1.25rem;
       height: 1.25rem;
@@ -144,7 +144,7 @@ const Wrapper = styled.div`
     }
     .prev:hover,
     .next:hover {
-      background: var(--clr-primary-5);
+      background: var(--clr-primary-1);
     }
     .prev {
       left: 0;

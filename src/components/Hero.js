@@ -81,7 +81,7 @@ const Wrapper = styled.section`
         letter-spacing: 5px;
       }
     }
-  }
+  }  
 `
 
 export default Hero

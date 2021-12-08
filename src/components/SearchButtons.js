@@ -53,7 +53,7 @@ const Wrapper = styled.section`
     text-transform: capitalize;
     background: transparent;
     border: transparent;
-    color: var(--clr-grey-6);
+    color: var(--clr-primary-4);
     letter-spacing: var(--spacing);
     font-size: 1rem;
     padding: 0.25rem;
@@ -63,7 +63,7 @@ const Wrapper = styled.section`
   }
   button:hover,
   button.active {
-    box-shadow: 0px 1.5px 0 var(--clr-grey-6);
+    box-shadow: 0px 1.5px 0 var(--clr-primary-4);
   }
 `
 export default SearchButtons

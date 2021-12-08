@@ -59,7 +59,7 @@ const Wrapper = styled.section`
     position: relative;
     overflow: hidden;
     border-radius: var(--radius);
-    background: var(--clr-primary-7);
+    background: var(--clr-primary-5);
     &:hover .img {
       opacity: 0.2;
     }

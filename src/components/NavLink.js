@@ -66,10 +66,10 @@ const Wrapper = styled.li`
       text-transform: capitalize;
       font-weight: 700;
       .icon {
-        color: #88add2;
+        color: #bcbff7;
       }
       &:hover {
-        color: #88add2;
+        color: #bcbff7;
         .icon {
           color: #0a2540;
         }

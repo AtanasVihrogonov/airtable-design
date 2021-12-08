@@ -13,18 +13,18 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: hsl(208, 27%, 10%);
-  --clr-primary-2: hsl(208, 27%, 16%);
-  --clr-primary-3: hsl(209, 27%, 21%);
-  --clr-primary-4: hsl(209, 28%, 27%);
+  --clr-primary-1: hsl(236, 79%, 75%);
+  --clr-primary-2: hsl(237, 80%, 79%);
+  --clr-primary-3: hsl(237, 80%, 82%);
+  --clr-primary-4: hsl(237, 80%, 85%);
   /* primary/main color */
-  --clr-primary-5: hsl(209, 27%, 48%);
+  --clr-primary-5: hsl(237, 80%, 89%);
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(210, 27%, 32%);
-  --clr-primary-7: hsl(208, 27%, 58%);
-  --clr-primary-8: hsl(210, 27%, 43%);
-  --clr-primary-9: hsl(209, 27%, 48%);
-  --clr-primary-10: hsl(21, 100%, 94%);
+  --clr-primary-6: hsl(237, 80%, 92%);
+  --clr-primary-7: hsl(237, 80%, 95%);
+  --clr-primary-8: hsl(237, 80%, 99%);
+  --clr-primary-9: hsl(237, 80%, 79%);
+  --clr-primary-10: hsl(237, 80%, 79%);
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
@@ -136,8 +136,8 @@ p {
 
 .btn {
   text-transform: uppercase;
-  background: var(--clr-primary-5);
-  color: var(--clr-primary-10);
+  background: var(--clr-primary-1);
+  color: var(--clr-primary-6);
   padding: 0.375rem 0.75rem;
   letter-spacing: var(--spacing);
   display: inline-block;
@@ -150,7 +150,7 @@ p {
   border-radius: var(--radius);
 }
 .btn:hover {
-  background: var(--clr-primary-7);
+  background: var(--clr-primary-6);
   color: var(--clr-primary-1);
 }
 

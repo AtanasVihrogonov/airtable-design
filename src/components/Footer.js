@@ -23,6 +23,7 @@ const Wrapper = styled.footer`
   place-items: center;
   background: var(--clr-black);
   text-align: center;
+  align-content: center;
   p {
     color: var(--clr-white);
     margin-bottom: 0;
@@ -31,7 +32,7 @@ const Wrapper = styled.footer`
     }
   }
   a {
-    color: var(--clr-primary-7);
+    color: var(--clr-primary-1);
   }
 `
 export default Footer
